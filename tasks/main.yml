@@ -1,0 +1,23 @@
+---
+- name: "Docker-CE | Add GPG key for repo"
+  rpm_key:
+    state: present
+    key: "{{ docker_gpg_url }}"
+
+- name: "Docker-CE | Add YUM repository"
+  get_url:
+    url: "{{ docker_ce_repo.url }}"
+    dest: /etc/yum.repos.d/docker-ce.repo
+    mode: 0644
+    checksum: "{{ docker_ce_repo.sha1 }}"
+
+- name: "Docker-CE | Install docker packages"
+  yum:
+    name: "{{ packages.docker_ce }}"
+    state: installed
+
+- name: "Docker-CE | Ensure that docker service is enabled and running"
+  systemd:
+    state: started
+    enabled: true
+    name: docker

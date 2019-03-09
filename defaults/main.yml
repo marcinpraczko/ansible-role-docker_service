@@ -1,0 +1,12 @@
+---
+# 2019/03/09: Latest available
+packages:
+  docker_ce:
+    - docker-ce-18.09.3-3.el7
+    - docker-ce-cli-18.09.3-3.el7.x86_64
+    - containerd.io-1.2.4-3.1.el7.x86_64
+
+docker_gpg_url: https://download.docker.com/linux/centos/gpg
+docker_ce_repo:
+  url: https://download.docker.com/linux/centos/docker-ce.repo
+  sha1: sha1:b9cab0cb1ddbffb77de51ba8838ea60335a229f6

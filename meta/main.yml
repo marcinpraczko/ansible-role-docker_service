@@ -1,0 +1,23 @@
+---
+
+dependencies: []
+
+galaxy_info:
+  role_name: "docker_service"
+  author: "Marcin Praczko"
+  description: "Simple role for installing Docker service"
+  company: "Open Solutions Lab, LLC"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.0
+
+  platforms:
+    - name: EL
+      versions:
+        - 7
+
+  categories:
+    - system
+
+  galaxy_tags:
+    - docker
+    - packages
